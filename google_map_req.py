@@ -28,9 +28,10 @@ def get_map_info(query,debug=True):
 		raw = res.text.lstrip(")]}'")
 		d = json.loads(raw)
 		try:
+			
 			output["搜尋"] = d[0][0]
 			output["名稱"] = d[0][1][0][14][11]
-			output["地址"] = d[0][1][0][14][2][0]
+			output["地址"]= d[0][1][0][14][2][0]
 			output["類別"] = d[0][1][0][14][13]
 			lat = d[0][1][0][14][9][2]
 			lon = d[0][1][0][14][9][3]
